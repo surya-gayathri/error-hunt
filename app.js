@@ -4,8 +4,8 @@ const path = require("path");
 const cors = require("cors");
 require("dotenv").config();
 
-const port = process.env.PORT || 5000;
-console.log(process.env.MONGODB_URI);
+const PORT = process.env.PORT || 5000;
+console.log("Using Port", PORT);
 // Part #1 Point 2
 // imported module body-parser
 const bodyParser = require("body-parser");
@@ -23,6 +23,8 @@ const booksRouter = require("./src/routes/booksroute");
 const authorsRouter = require("./src/routes/authorsroute");
 
 const app = new express();
+
+app.set("port", PORT);
 
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
