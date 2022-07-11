@@ -52,6 +52,6 @@ app.get("/", function (req, res) {
   res.render("index", {});
 });
 
-app.listen(port, () => {
-  console.log("Server Ready on 3000");
+app.listen(PORT, () => {
+  console.log("Server Ready on", PORT);
 });
