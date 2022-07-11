@@ -2,9 +2,10 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
+require("dotenv").config();
 
 const port = process.env.PORT || 5000;
-
+console.log(process.env.MONGODB_URI);
 // Part #1 Point 2
 // imported module body-parser
 const bodyParser = require("body-parser");
