@@ -6,6 +6,7 @@ require("dotenv").config();
 
 const PORT = process.env.PORT || 5000;
 console.log("Using Port", PORT);
+console.log("MongoDB URI", process.env.MONGODB_URI);
 // Part #1 Point 2
 // imported module body-parser
 const bodyParser = require("body-parser");
